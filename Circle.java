@@ -1,4 +1,4 @@
-public class Circle extends GeometricObject implements Comparable<Circle>{
+public class Circle extends GeometricObject {
     private double radius;
 
     public Circle(){}
