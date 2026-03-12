@@ -34,7 +34,7 @@ public class Rectangle{
 
     //ADD GETDATECREATED()
     public String toString() {
-        return "The rectangle is created "  + ". The width is " + width + " and the height is " + height + ". The area = " + getArea();
+        return "The rectangle was created on "  + ". The width is " + width + " and the height is " + height + ". The area = " + getArea();
     }
 
     public boolean equals(Rectangle r){

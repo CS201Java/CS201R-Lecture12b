@@ -15,6 +15,7 @@ public abstract class GeometricObject{
         filled = f;
         dateCreated = new java.util.Date();
      }
+     
      public String getColor() {return color;}
      public void setColor(String c) {color = c;}
      public boolean isFilled(){return filled;}
