@@ -21,6 +21,8 @@ public abstract class GeometricObject{
      public boolean isFilled(){return filled;}
      public void setFilled(boolean f) {filled = f;}
      public Date getDateCreated() {return dateCreated;}
+     public void setDateCreated(Date d) {dateCreated = d;}
+     
      public String toString(){return "created on: " + dateCreated + "\ncolor: " + color + " and filled: " + filled;}
 
      public abstract double getArea();

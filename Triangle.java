@@ -1,4 +1,4 @@
-public class Triangle {
+public class Triangle extends GeometricObject {
     private int s1, s2, s3;
 
     public Triangle(){}
@@ -18,13 +18,20 @@ public class Triangle {
     }
 
     //COMPLETE THESE FUNCTIONS
-    public double getArea() {return 0;}
-    public double getPerimeter() {return 0;}
+    public double getArea() {        
+        double s = (s1 + s2 + s3)/2.0;
+		double area = Math.sqrt(s*(s-s1)*(s-s2)*(s-s3));
+        return area;
+    }
+
+    public double getPerimeter() {return s1 + s2 + s3;}
 
 
     //ADD GETDATECREATED()
     public String toString() {
-        return " ";
+        return "The Triangle was created on "  + 
+        getDateCreated() +
+        ". The sides are: " + s1 + ", " + s2 + ", " + s3 + ". The area = " + getArea();
     }
 
     public boolean equals(Triangle r){
@@ -32,9 +39,17 @@ public class Triangle {
                 this.getPerimeter() == r.getPerimeter());
     }
     
-    //ADD COMPARETO LOGIC HERE
-    public int compareTo(Triangle other){
-    return 0;
+    /* 
+    @Override
+    public Triangle clone() throws CloneNotSupportedException {
+        Triangle copyT = (Triangle) super.clone();
+
+        if (getDateCreated() != null) {
+            copyT.setDateCreated(new java.util.Date(getDateCreated().getTime()));
+        }
+
+        return copyT;
     }
+    */
 
 }

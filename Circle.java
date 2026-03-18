@@ -26,14 +26,13 @@ public class Circle extends GeometricObject {
     public boolean equals(Circle c){
         return this.radius == c.radius;
     }
-    
-    public int compareTo(Circle other){
+
+    public int compareTo(GeometricObject other){
         if (getArea() > other.getArea())
             return 1;
         else if (getArea() < other.getArea())
             return -1;
         else
             return 0;
-
     }
 }

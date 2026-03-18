@@ -3,21 +3,26 @@
 //EXTEND GEOMETRICOBJECT 
 //IMPLEMENT COMPARABLE
 
-public class Rectangle{
+public class Rectangle extends GeometricObject{
     private int width;
     private int height;
 
-    public Rectangle(){}
+    public Rectangle(){
+        super();
+        width = 0;
+        height = 0;
+    }
 
     //ADD CALL TO SUPER
     public Rectangle (int w, int h){
+        super();
         width = w; 
         height = h;
     }
 
     //ADD CALL TO SUPER
     public Rectangle(int w, int h,String color, boolean filled) {
-
+        super(color,filled);
         width = w; 
         height = h;
     }
@@ -29,20 +34,20 @@ public class Rectangle{
     public void   setheight(int h) {this.height = h;}
 
     //COMPLETE THESE FUNCTIONS
-    public double getArea() {return 0;}
-    public double getPerimeter() {return 0;}
+    public double getArea() {
+        return width*height;}
+    public double getPerimeter() {
+        return 2*width + 2*height;}
 
     //ADD GETDATECREATED()
     public String toString() {
-        return "The rectangle was created on "  + ". The width is " + width + " and the height is " + height + ". The area = " + getArea();
+        return "The rectangle was created on "  + 
+        getDateCreated() +
+        ". The width is " + width + " and the height is " + height + ". The area = " + getArea();
     }
 
     public boolean equals(Rectangle r){
         return this.width == r.width && this.height == r.height;
     }
 
-    //ADD COMPARETO LOGIC HERE
-    public int compareTo(Rectangle other){
-        return 0;
-    }
 }
